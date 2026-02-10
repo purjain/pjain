@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Purnima Jain — Software Engineer</title>
+  <meta name="description" content="Purnima Jain — Software Engineer. Kubernetes, CI/CD, Python services, flight test automation, NASA internships." />
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#0f1620;
+      --text:#e7eef8;
+      --muted:#a8b3c2;
+      --line:rgba(255,255,255,.10);
+      --accent:#7dd3fc;
+      --accent2:#a78bfa;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1040px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background:
+        radial-gradient(1200px 600px at 12% 6%, rgba(125,211,252,.13), transparent 55%),
+        radial-gradient(900px 500px at 88% 18%, rgba(167,139,250,.12), transparent 52%),
+        radial-gradient(700px 500px at 60% 95%, rgba(125,211,252,.08), transparent 50%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    a:hover{opacity:.9}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 60px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(11,15,20,.85), rgba(11,15,20,.35));
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{
+      max-width:var(--max); margin:0 auto; padding:14px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:650}
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 5px rgba(125,211,252,.10);
+    }
+    nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      padding:8px 10px; border-radius:999px;
+      color:var(--muted);
+      border:1px solid transparent;
+      transition: all .15s ease;
+      font-size:14px;
+    }
+    nav a:hover{color:var(--text); border-color:var(--line); background: rgba(255,255,255,.03)}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      box-shadow: var(--shadow);
+      transition: transform .15s ease, background .15s ease;
+      font-weight:600;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.05)}
+    .btn .k{font-family:var(--mono); font-size:12px; color:var(--muted); border:1px solid var(--line); padding:2px 8px; border-radius:999px}
+    header.hero{padding:38px 0 10px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.4fr .6fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero-grid{grid-template-columns:1fr}
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .h1{
+      font-size: clamp(28px, 4.2vw, 44px);
+      line-height:1.12;
+      letter-spacing:-.02em;
+      margin:0 0 12px;
+    }
+    .sub{
+      color:var(--muted);
+      font-size: 16px;
+      margin:0 0 16px;
+      max-width: 62ch;
+    }
+    .tagrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+    .tag{
+      font-size:13px;
+      color:var(--muted);
+      border:1px solid var(--line);
+      padding:6px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,.02);
+    }
+    .pill{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;
+    }
+    .pill a{white-space:nowrap}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
+    section{padding:18px 0}
+    .section-title{
+      display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+      margin: 10px 0 12px;
+    }
+    h2{
+      margin:0;
+      font-size: 18px;
+      letter-spacing:.02em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .section-title .hint{color:var(--muted); font-size:13px}
+    .item{padding:16px; border-radius: var(--radius); border:1px solid var(--line); background: rgba(255,255,255,.02)}
+    .item h3{margin:0 0 4px; font-size:16px}
+    .meta{color:var(--muted); font-size:13px; display:flex; gap:10px; flex-wrap:wrap}
+    ul{margin:10px 0 0; padding-left:18px; color:var(--text)}
+    li{margin:6px 0}
+    .two-col{display:grid; grid-template-columns:1.2fr .8fr; gap:14px}
+    @media (max-width: 920px){ .two-col{grid-template-columns:1fr} }
+    .kicker{font-family:var(--mono); color:var(--muted); font-size:12px; margin-bottom:10px}
+    .contact{
+      display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;
+    }
+    .small{font-size:13px; color:var(--muted)}
+    .footer{padding-top:18px; border-top:1px solid var(--line); margin-top:18px}
+    .sr{position:absolute; left:-9999px}
+    .toast{
+      position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+      padding:10px 14px; border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(15,22,32,.85);
+      backdrop-filter: blur(10px);
+      color: var(--text);
+      box-shadow: var(--shadow);
+      font-size: 13px;
+      opacity:0; pointer-events:none;
+      transition: opacity .18s ease, transform .18s ease;
+    }
+    .toast.show{opacity:1; transform: translateX(-50%) translateY(-2px)}
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Purnima Jain</span>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <header class="hero" id="top">
+      <div class="hero-grid">
+        <div class="card">
+          <div class="kicker">Software Engineer • Kubernetes • Python • CI/CD</div>
+          <h1 class="h1">I build reliable systems for real-world operations.</h1>
+          <p class="sub">
+            I’m a software engineer at <strong>Northrop Grumman</strong> building and deploying containerized applications in
+            Kubernetes-based enterprise environments. I like complex infrastructure, production debugging, and clean, practical automation.
+          </p>
+
+          <div class="pill">
+            <a class="btn" href="#contact">Contact <span class="k">↵</span></a>
+            <a class="btn" id="copyEmailBtn" href="javascript:void(0)">Copy email <span class="k">⌘C</span></a>
+            <a class="btn" href="https://www.linkedin.com/in/purnimajain1/" target="_blank" rel="noreferrer">LinkedIn <span class="k">↗</span></a>
+          </div>
+
+          <div class="tagrow">
+            <span class="tag">Kubernetes</span>
+            <span class="tag">CI/CD (Cucumber)</span>
+            <span class="tag">Python services</span>
+            <span class="tag">Flight test automation</span>
+            <span class="tag">NASA internships</span>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3 style="margin:0 0 8px;">Quick facts</h3>
+          <div class="meta" style="margin-bottom:10px;">
+            <span>Based in Baltimore, MD</span>
+            <span>•</span>
+            <span>Open to roles in infra / platform</span>
+          </div>
+          <div class="item" style="margin-top:12px;">
+            <h3 style="margin:0 0 6px;">Current</h3>
+            <div class="meta">Northrop Grumman • Containerized apps • Enterprise deployments</div>
+          </div>
+          <div class="item" style="margin-top:12px;">
+            <h3 style="margin:0 0 6px;">Background</h3>
+            <div class="meta">NASA Goddard + Kennedy • Automation + simulation • ML motion modeling</div>
+          </div>
+          <div class="item" style="margin-top:12px;">
+            <h3 style="margin:0 0 6px;">Education</h3>
+            <div class="meta">B.S. Computer Science • California State University, Long Beach</div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="section-title">
+        <h2>About</h2>
+        <div class="hint">What I’m about</div>
+      </div>
+
+      <div class="card">
+        <p style="margin:0;">
+          I’m drawn to work where reliability and clarity matter: deploying services, making CI/CD trustworthy,
+          and debugging the kinds of problems that only show up under real production constraints.
+          I’ve worked across the hardware/software boundary in flight test contexts, and I’m comfortable jumping from logs and metrics
+          to code changes and rollout plans.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-title">
+        <h2>Experience</h2>
+        <div class="hint">Impact-focused highlights</div>
+      </div>
+
+      <div class="grid">
+        <article class="item">
+          <h3>Software Engineer — Northrop Grumman</h3>
+          <div class="meta">
+            <span>Baltimore, MD</span><span>•</span><span>2023 — Present</span>
+          </div>
+          <ul>
+            <li>Build and deploy containerized applications in Kubernetes-based enterprise environments.</li>
+            <li>Engineered CI/CD integration tests using <strong>Cucumber</strong> to reduce regressions.</li>
+            <li>Debugged production Python service failures and improved deployment documentation to streamline onboarding.</li>
+            <li>Contributed to mission-critical flight test automation and radar/health monitoring workflows.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <h3>Intern — NASA Goddard Space Flight Center</h3>
+          <div class="meta"><span>Python automation</span><span>•</span><span>Simulation frameworks</span></div>
+          <ul>
+            <li>Developed Python automation tools to speed up technical workflows.</li>
+            <li>Worked within spacecraft simulation frameworks to support analysis and testing.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <h3>Intern — NASA Kennedy Space Center</h3>
+          <div class="meta"><span>ML modeling</span><span>•</span><span>Spacecraft motion</span></div>
+          <ul>
+            <li>Applied ML techniques to spacecraft motion modeling and analysis.</li>
+            <li>Built tools to make experimentation and evaluation repeatable.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <h3>Early career work</h3>
+          <div class="meta"><span>Hardware ↔ software bridging</span><span>•</span><span>Systems reliability</span></div>
+          <ul>
+            <li>Worked on flight test automation and systems that connect hardware signals to software monitoring.</li>
+            <li>Comfortable working “close to the metal” when it improves reliability and observability.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-title">
+        <h2>Projects</h2>
+        <div class="hint">Add 2–4 real ones and link them</div>
+      </div>
+
+      <div class="grid">
+        <article class="item">
+          <h3>CI/CD Integration Test Harness</h3>
+          <div class="meta"><span>Cucumber</span><span>•</span><span>Pipeline reliability</span></div>
+          <p style="margin:10px 0 0; color:var(--muted);">
+            Designed integration test coverage that catches deployment-breaking changes early.
+            <span class="small">(Replace with specifics: stack, results, % reduction, etc.)</span>
+          </p>
+        </article>
+
+        <article class="item">
+          <h3>Production Debugging Playbooks</h3>
+          <div class="meta"><span>Python</span><span>•</span><span>Runbooks</span></div>
+          <p style="margin:10px 0 0; color:var(--muted);">
+            Improved deployment docs and debugging workflows to reduce onboarding friction and speed up incident response.
+          </p>
+        </article>
+
+        <article class="item">
+          <h3>Automation Script for Flight Program Workflows</h3>
+          <div class="meta"><span>Bash</span><span>•</span><span>Process automation</span></div>
+          <p style="margin:10px 0 0; color:var(--muted);">
+            Automated repetitive steps to streamline a flight program’s testing process.
+          </p>
+        </article>
+
+        <article class="item">
+          <h3>Spacecraft Simulation Tooling</h3>
+          <div class="meta"><span>Python</span><span>•</span><span>NASA</span></div>
+          <p style="margin:10px 0 0; color:var(--muted);">
+            Built tools around simulation frameworks to support experimentation and analysis.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-title">
+        <h2>Skills</h2>
+        <div class="hint">Tools I’m strongest with</div>
+      </div>
+
+      <div class="two-col">
+        <div class="item">
+          <h3>Technical</h3>
+          <div class="tagrow" style="margin-top:12px;">
+            <span class="tag">Python</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">Cucumber</span>
+            <span class="tag">Containers</span>
+            <span class="tag">SQL</span>
+            <span class="tag">C++</span>
+            <span class="tag">Bash</span>
+            <span class="tag">HTML/CSS</span>
+          </div>
+        </div>
+        <div class="item">
+          <h3>How I work</h3>
+          <ul>
+            <li>Production-first mindset: logs, metrics, rollbacks, repeatability.</li>
+            <li>Strong at debugging ambiguous failures and communicating clearly.</li>
+            <li>I optimize for maintainability: docs, runbooks, and clean interfaces.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <div class="hint">Let’s talk</div>
+      </div>
+
+      <div class="card">
+        <div class="contact">
+          <div>
+            <div style="font-weight:650; margin-bottom:4px;">Email</div>
+            <div class="small" id="emailText">pjnet8@gmail.com</div>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn" href="mailto:pjnet8@gmail.com">Email me <span class="k">↗</span></a>
+            <a class="btn" href="https://www.linkedin.com/in/purnimajain1/" target="_blank" rel="noreferrer">Message on LinkedIn <span class="k">↗</span></a>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="small">© <span id="year"></span> Purnima Jain • Built with plain HTML/CSS</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied!</div>
+
+  <script>
+    // Smooth scroll for in-page nav
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if (!href || href === "#") return;
+        const el = document.querySelector(href);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Copy email
+    const email = "pjnet8@gmail.com";
+    const btn = document.getElementById("copyEmailBtn");
+    const toast = document.getElementById("toast");
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 1200);
+    }
+    btn.addEventListener("click", async () => {
+      try{
+        await navigator.clipboard.writeText(email);
+        showToast("Email copied");
+      } catch(e){
+        showToast("Copy failed — email is: " + email);
+      }
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Keyboard shortcut: press "c" to copy email
+    window.addEventListener("keydown", (e) => {
+      if (e.key.toLowerCase() === "c" && (e.metaKey || e.ctrlKey)) return; // don't hijack normal copy
+      if (e.key.toLowerCase() === "c") {
+        navigator.clipboard.writeText(email).then(() => showToast("Email copied"));
+      }
+    });
+  </script>
+</body>
+</html>
